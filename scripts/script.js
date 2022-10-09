@@ -9,7 +9,7 @@ $(window).on("load", function() {
 		$('body').css({
 			overflow: 'auto'
 		});
-		document.getElementById("nav-container").style.display = "inherit"
+		document.getElementById("nav-container").style.display = "initial"
 	}, 250);
 });
 var prevScrollpos = window.pageYOffset;
@@ -33,9 +33,7 @@ var sticky = navbar.offsetTop;
 function myFunction() {
 	if (window.pageYOffset >= sticky) {
 		navbar.classList.add("sticky");
-		navbar.style.backgroundColor = "RGBA(0,0,0,0.3)";
 	} else {
 		navbar.classList.remove("sticky");
-		navbar.style.backgroundColor = "RGBA(0,0,0,0.0)";
 	}
 }

@@ -125,7 +125,7 @@ body {
 }
 .main {
 	width: 100%;
-	height: 10000px;
+	height: 60vh;
 	background: rgb(54, 53, 255);
 	background: linear-gradient(90deg, rgba(54, 53, 255, 1) 18%, rgba(70, 69, 208, 1) 57%, rgba(76, 76, 233, 1) 100%);
 }
@@ -162,10 +162,9 @@ body {
 	}
 }
 #navbar {
-	background-color: #333;
 	top: 0;
 	width: 100%;
-	display: block;
+	height: 80px;
 	transition: top 0.5s;
 }
 nav {
@@ -173,12 +172,29 @@ nav {
 	display: flex;
 	justify-content: center;
 }
-.nav-content {
+#nav-container {
 	text-align: center;
-	text-decoration: none;
-	color: var(--clr-color_2);
-	width: 200px;
+	width: 70%;
+	display: flex;
+	margin: auto 0;
+	height: 80px;
 	font-size: 20px;
+	img {
+		float: left;
+	}
+	.hrefs {
+		float: right;
+		a {
+			color: white;
+			margin: 10px;
+			width: 120px;
+			line-height: 80px;
+			text-decoration: none;
+			&:hover {
+				border-bottom: 1px solid;
+			}
+		}
+	}
 }
 .sticky {
 	background-color: var(--background_10);
@@ -203,22 +219,4 @@ nav {
 	position: absolute;
 	top: 0;
 	left: 0;
-}
-.referer-warning {
-	background: black;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-	padding: 0.75em;
-	color: white;
-	text-align: center;
-	line-height: 1.2;
-	font-size: 1rem;
-	position: relative;
-	z-index: 2;
-}
-.referer-warning h1 {
-	font-size: 1.2rem;
-	margin: 0;
-}
-.referer-warning a {
-	color: #56bcf9;
 }
