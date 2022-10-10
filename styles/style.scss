@@ -220,3 +220,51 @@ nav {
 	top: 0;
 	left: 0;
 }
+.banner2 {
+	position: relative;
+	float: right;
+	height: calc(60vh - 80px);
+}
+.banner1 {
+	position: relative;
+	float: left;
+	height: calc(60vh - 80px);
+}
+.main-text {
+	font-size: 45px;
+	font-weight: bolder;
+}
+.bottom-text {
+	max-width: 570px;
+	font-size: 20px;
+	margin-top: 5px;
+	font-weight: normal;
+}
+.left {
+	max-width: 570px;
+	color: white;
+	margin-top: 30px;
+	margin-left: calc(60vh - 70px);
+	position: absolute;
+	width: calc(60vh - 80px);
+	float: left;
+	a {
+		text-decoration: none;
+		color: white;
+	}
+}
+.main-button {
+	width: 300px;
+	border-radius: 40px;
+	margin-top: 15px;
+	background-color: white;
+	height: 50px;
+	cursor: pointer;
+	color: black;
+	font-weight: 500;
+	font-size: 20px;
+	&:hover {
+		box-shadow: 0 8px 15px rgb(0 0 0 / 20%);
+	}
+	margin-top: calc(15vh);
+}
