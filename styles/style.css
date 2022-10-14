@@ -26,10 +26,6 @@ body {
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
-  -webkit-user-select: none;
   background: #2c2d44;
 }
 body .vertical-centered-box .content {
@@ -160,7 +156,7 @@ body .vertical-centered-box {
 
 .main {
   width: 100%;
-  height: 60vh;
+  height: 600px;
   background: rgb(54, 53, 255);
   background: linear-gradient(90deg, rgb(54, 53, 255) 18%, rgb(70, 69, 208) 57%, rgb(76, 76, 233) 100%);
 }
@@ -203,6 +199,9 @@ body .vertical-centered-box {
 
 #navbar {
   top: 0;
+  z-index: 100 !important;
+  position: -webkit-sticky;
+  position: sticky;
   width: 100%;
   height: 80px;
   transition: top 0.5s;
@@ -223,19 +222,21 @@ nav {
   font-size: 20px;
 }
 #nav-container img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   float: left;
 }
-#nav-container .hrefs {
+
+.hrefs a {
   float: right;
-}
-#nav-container .hrefs a {
   color: white;
   margin: 10px;
-  width: 120px;
-  line-height: 80px;
+  margin-top: 26px;
   text-decoration: none;
 }
-#nav-container .hrefs a:hover {
+.hrefs a:hover {
   border-bottom: 1px solid;
 }
 
@@ -253,7 +254,6 @@ nav {
 
 #container {
   width: 100%;
-  height: 100vh;
   background-color: white;
 }
 
@@ -268,15 +268,25 @@ nav {
 }
 
 .banner2 {
+  z-index: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   position: relative;
   float: right;
-  height: calc(60vh - 80px);
+  height: 520px;
 }
 
 .banner1 {
+  z-index: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   position: relative;
   float: left;
-  height: calc(60vh - 80px);
+  height: 520px;
 }
 
 .main-text {
@@ -295,7 +305,8 @@ nav {
   max-width: 570px;
   color: white;
   margin-top: 30px;
-  margin-left: calc(60vh - 70px);
+  margin-bottom: 30px;
+  margin-left: calc(35% - 70px);
   position: absolute;
   width: calc(60vh - 80px);
   float: left;
@@ -308,15 +319,105 @@ nav {
 .main-button {
   width: 300px;
   border-radius: 40px;
-  margin-top: 15px;
-  background-color: white;
   height: 50px;
   cursor: pointer;
-  color: black;
   font-weight: 500;
   font-size: 20px;
-  margin-top: 15vh;
 }
 .main-button:hover {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bc {
+  color: black;
+  background-color: white;
+  margin-top: 200px;
+}
+
+.ac {
+  color: white;
+  background-color: #4645d0;
+  margin-top: 70px;
+}
+
+#divgrid {
+  height: 680px;
+  background-color: white;
+}
+#divgrid h1 {
+  padding-top: 56px;
+  font-weight: 700;
+  font-size: 48px;
+}
+#divgrid p {
+  display: flex;
+  max-width: 600px;
+  padding-top: 24px;
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+#divgrid img {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  height: 350px;
+  z-index: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+
+.divgrid-gridinside {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  margin-top: 50px;
+  right: 0;
+  text-align: center;
+  position: absolute;
+  width: 60%;
+  text-align: center;
+}
+
+.divgrid-gridoutside {
+  padding-top: 165px;
+}
+
+#divgrid2 {
+  height: 680px;
+  background-color: #f6f6f6;
+}
+#divgrid2 h1 {
+  padding-top: 56px;
+  font-weight: 700;
+  font-size: 48px;
+}
+#divgrid2 p {
+  display: flex;
+  max-width: 600px;
+  padding-top: 24px;
+  font-size: 20px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+#divgrid2 img {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  height: 350px;
+  z-index: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
