@@ -123,7 +123,7 @@ body {
 }
 .main {
 	width: 100%;
-	height: 600px;
+	height: 800px;
 	background: rgb(54, 53, 255);
 	background: linear-gradient(90deg, rgba(54, 53, 255, 1) 18%, rgba(70, 69, 208, 1) 57%, rgba(76, 76, 233, 1) 100%);
 }
@@ -162,10 +162,9 @@ body {
 #navbar {
 	top: 0;
 	z-index: 100 !important;
-	position: sticky;
 	width: 100%;
 	height: 80px;
-	transition: top 0.5s;
+	transition: all 0.5s;
 }
 nav {
 	align-items: center;
@@ -173,6 +172,7 @@ nav {
 	justify-content: center;
 }
 #nav-container {
+	
 	text-align: center;
 	width: 70%;
 	display: flex;
@@ -199,8 +199,14 @@ nav {
 		}
 	}
 }
+.menu-container { 
+	height: 80px; 
+	background-color: transparent;
+}
 .sticky {
-	background-color: var(--background_10);
+	
+	color: #4645d0;
+	background-color: rgba(0, 0, 0, 0.1);
 	position: fixed;
 	top: 0;
 	z-index: 99 !important;
@@ -230,7 +236,7 @@ nav {
     user-select: none;
 	position: relative;
 	float: right;
-	height: calc(600px - 80px);
+	padding-top: 108px;
 }
 .banner1 {
 	z-index: 0; 
@@ -240,7 +246,7 @@ nav {
     user-select: none;
 	position: relative;
 	float: left;
-	height: calc(600px - 80px);
+	padding-top: 108px;
 }
 .main-text {
 	font-size: 45px;
@@ -255,8 +261,7 @@ nav {
 .left {
 	max-width: 570px;
 	color: white;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 150px;
 	margin-left: calc(35% - 70px);
 	position: absolute;
 	width: calc(60vh - 80px);
@@ -284,13 +289,13 @@ nav {
 	margin-top: 200px;
 }
 .ac {
-	color: white;
-	background-color: #4645d0;
 	margin-top: 70px;
 }
+.dc, .ac {
+	color: white;
+	background-color: #4645d0;
+}
 #divgrid {
-	height: 680px;
-	background-color: white;
 	h1 {
 		padding-top: 56px;
 		font-weight: 700;
@@ -305,20 +310,6 @@ nav {
     	justify-content: center;
     	text-align: center;
    		margin: 0 auto;
-	}
-	img {
-		margin-left: auto;
-		margin-right: auto;
-		display: flex;
-		justify-content: center;
-		width: 1000px;
-		height: 350px;
-		z-index: 0;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		position: relative;
 	}
 }
 .divgrid-gridinside {
@@ -337,24 +328,17 @@ nav {
 	padding-top: 165px;
 }
 
-#divgrid2 {
-	height: 680px;
-	background-color: #f6f6f6;;
-	h1 {
-		padding-top: 56px;
-		font-weight: 700;
-		font-size: 48px;
+.grid1 {
+	background-color: white;
+	
+}
 
-	}
-	p {
-    	display: flex;
-    	max-width: 600px;
-		padding-top: 24px;
-		font-size: 20px;
-    	justify-content: center;
-    	text-align: center;
-   		margin: 0 auto;
-	}
+.grid2 {
+	background-color: #f6f6f6;;
+}
+
+.grid1, .grid2 {
+	height: 680px;
 	img {
 		margin-left: auto;
 		margin-right: auto;
@@ -369,4 +353,46 @@ nav {
 		user-select: none;
 		position: relative;
 	}
+}
+
+.grid3 {
+	height: 340px;
+	background-color: #2c2c2c;
+	img {
+		
+		height: 80px;
+	}
+}
+.divgridinfobox {
+	margin-left: auto;
+	justify-content: center;
+	display: flex;
+	margin-right: auto;
+	width: 40%;
+	a {
+		margin-top: 70px;
+		margin-left: 25px;
+		margin-right: 25px;
+		margin-bottom: 30px;
+		color: #4645d0;
+		text-decoration: none;
+		font-size: 16px;
+    	line-height: 24px;
+		border-bottom: 1px solid #2c2c2c;
+		box-sizing: border-box;
+		&:hover {
+			border-bottom: 1px solid #4645d0;
+		}
+	}
+}
+.divgridinfobottom {        
+	border-top: 2px solid#4645d0;
+	padding-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+.dc {
+	margin-top: 15px;
+	float: right;
 }
