@@ -28,12 +28,18 @@ window.onscroll = function() {
 	myFunction()
 };
 var navbar = document.querySelector("#navbar");
+var navbarmenu = document.querySelector(".menu__box");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
 	if (window.pageYOffset >= sticky) {
 		navbar.classList.add("sticky");
+		navbarmenu.classList.remove("dd")
+		navbarmenu.classList.add("sticky-menu-box")
 	} else {
 		navbar.classList.remove("sticky");
+		navbarmenu.classList.remove("sticky-menu-box")
+		navbarmenu.classList.add("dd")
 	}
 }
+

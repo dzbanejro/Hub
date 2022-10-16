@@ -212,6 +212,9 @@ nav {
 	z-index: 99 !important;
 	width: 100%;
 }
+.sticky-menu-box {
+	margin-top: 80px;
+}
 .sticky+.content {
 	padding-top: 60%;
 }
@@ -342,7 +345,6 @@ nav {
 	img {
 		margin-left: auto;
 		margin-right: auto;
-		display: flex;
 		justify-content: center;
 		width: 1000px;
 		height: 350px;
@@ -353,6 +355,9 @@ nav {
 		user-select: none;
 		position: relative;
 	}
+}
+.bb {
+	display: flex;
 }
 
 .grid3 {
@@ -391,8 +396,240 @@ nav {
 	margin-left: auto;
 	margin-right: auto;
 	width: 40%;
+	img {
+		width: 140px;
+		height: 80px;
+	}
 }
 .dc {
 	margin-top: 15px;
 	float: right;
+}
+.hamburgernone {
+	display: none;
+}
+#menu__toggle {
+	display: none;
+	opacity: 0;
+  }
+  #menu__toggle:checked + .menu__btn > span {
+	transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+	top: 0;
+	transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+	top: 0;
+	transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+	right: 0 !important;
+  }
+  .menu__btn {
+	position: absolute;
+	width: 26px;
+	height: 26px;
+	margin-left: 140px;
+	margin-top: 40px;
+	cursor: pointer;
+	z-index: 1;
+  }
+  .menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  z-index: 99 !important;
+  display: block;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 170px;
+  height: 300px;
+  padding: 30px 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  transition-duration: .25s;
+}
+.menu__item {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #ECEFF1; 
+  transition-duration: .25s;
+  &:hover {
+	border-bottom: 1px solid black;
+	}
+}
+.bn {
+	display: none;
+}
+
+.dd {
+	margin-top: 150px;
+}
+@media screen and (max-width: 2560px) {
+	.divgridinfobox a{
+		margin-top: 130px;
+	}
+}
+
+
+
+@media screen and (max-width: 1024px) {
+	.banner1 {
+		display: none;
+	}
+	.left {
+		margin-left: 100px;
+	}
+	.divgridinfobottom {
+		width: 60%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.divgridinfobottom {
+		width: 80%;
+	}
+	.divgrid-gridoutside {
+		padding-top: 190px;
+		img {
+			width: 670px;
+			height: 300px;
+		}
+	}
+	.divgrid-gridinside {
+		margin-top: 0px;
+	}
+	#divgrid h1 {
+			font-size: 40px;
+	}
+	#divgrid p {
+		font-size: 17px;
+	}
+	.banner2 {
+		width: 370px;
+		padding-top: 243px;
+	}
+	.hamburgernone {
+		display: initial;
+	}
+	.hrefs {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.menu__btn {
+		margin-left: 70px;
+	}
+	.left {
+		width: 100px;
+		margin-left: 40px;
+	}
+	.divgrid-gridoutside {
+		img {
+			height: 160px;
+			width: 420px;
+		}
+	}
+	.no {
+		margin-top: 60px;
+	}
+	.divgridinfobox a {
+		font-size: 15px;
+		margin-left: 10px;
+    margin-right: 10px;
+	}
+	.announce-top-text {
+		margin-top: 17px;
+		width: 200px;
+		font-weight: 400;
+		font-size: 13px;
+	}
+	#nav-container {
+		width: 90%;
+	}
+	.banner2 {
+		width: 250px;
+		padding-top: 298px;
+	}
+	.main-text {
+		width: 350px;
+		font-size: 40px;
+	}
+	.bottom-text {
+		font-size: 17px;
+		width: 300px;
+	}
+	.bc {
+		margin-top: 30px;
+	}
+	.main-button {
+		font-size: 17px;
+		width: 270px;
+	}
+	.main {
+		height: 700px;
+	}
+	.announce-top-button {
+		font-size: 11px;
+		width: 110px;
+	}
+	.gryflogo {
+		margin-top: 15px;
+		width: 40px;
+		height: 40px;
+	}
+	#divgrid h1 {
+		font-size: 35px;
+	}
+	#divgrid p {
+		padding-top: 20px;
+		font-size: 15px;
+	}
+	.bm {
+		display: flex;
+	}
+	.bb {
+		display: none;
+	}
+	.add {
+		margin-top: 90px;
+	}
+	.divgridinfobottom {
+		width: 96%;
+	}
+	.resize {
+		font-size: 15px;
+		width: 240px;
+	}
+
+}
+@media screen and (max-width: 375px) {
+	
 }
