@@ -8,8 +8,18 @@
 	</script>
 	<meta content='width=device-width, initial-scale=1' name='viewport'>
 	<meta content="CodePen" name="apple-mobile-web-app-title">
-	<link href="images/2tpi-icon.png" rel="icon">
+	<link href="images/logo.png" rel="icon">
 	<title>Hub 2tpi</title>
+	<script src="https://kit.fontawesome.com/582f5bc4e8.js" crossorigin="anonymous"></script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z6ZBGJQ6D"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-2Z6ZBGJQ6D');
+	</script>
 </head>
 <body>
 	<div id="result-iframe-wrap" role="main">
@@ -65,42 +75,84 @@
 			<div class="announce-top">
 				<div class="announce-top-content">
 					<img alt="" class="gryflogo" src="images/logo.png">
-					<p class="announce-top-text"><span class="announce-top-text-span"><b>Gryf jaganowo jest w rozwoju!</b> I jeszcze trochę pobędzie...</span></p><button class="announce-top-button" onclick="location.href='gryf.html';" type="button">Zobacz więcej</button>
+					<p class="announce-top-text"><span class="announce-top-text-span"><b id="announce-top-text-b">Gryf jaganowo jest w rozwoju!</b><span id="announce-top-text">I jeszcze trochę pobędzie...</span></span></p><button class="announce-top-button" onclick="location.href='gryf.html';" type="button" id="announce-top-button">Zobacz więcej</button>
 				</div>
 			</div>
-			
 			<div class="main">
 				<div class="menu-container">
 				<nav id="navbar">
 					<div id="nav-container">
 						<a href="index.html">
 							<img alt="2tpi" height="80px" width="140px" src="images/2tpi.png"></a>
-						<div class="hrefs">
-							<a href="contact.html">Kontakt</a> <a href="skarbnik.html">Skarbnik</a> <a href="news.html">Wiadomości</a> <a href="projects.html">Projekty</a> <a href="devs.html">Developerzy</a>
-						</div>
-						<div class="hamburgernone">
+							<div class="hamburgernone">
 							<div class="hamburger-menu">
 								<input id="menu__toggle" type="checkbox" />
 								<label class="menu__btn" for="menu__toggle">
 								  <span></span>
 								</label>
-							
 								<ul class="menu__box dd">
-								  <li><a class="menu__item" href="devs.html">Developerzy</a></li>
-										<li><a class="menu__item" href="projects.html">Projekty</a></li>
-										<li><a class="menu__item" href="news.html">Wiadomości</a></li>
-										<li><a class="menu__item" href="skarbnik.html">Skarbnik</a></li>
-										<li><a class="menu__item" href="contact.html">Kontakt</a></li>
+								  <li><a class="menu__item" href="devs.html" id="devs2">Developerzy</a></li>
+										<li><a class="menu__item" href="projects.html" id="projects2">Projekty</a></li>
+										<li><a class="menu__item" href="news.html" id="news2">Wiadomości</a></li>
+										<li><a class="menu__item" href="skarbnik.html" id="skarbnik2">Skarbnik</a></li>
+										<li><a class="menu__item" href="contact.html" id="contact2">Kontakt</a></li>
+										<div class="lang-div2">
+											<div id="lang-divgrid2" onclick="selectlang()">
+												<div class="flag-icon">
+													<img src="images/pl.png" id="flag-icon" alt="">
+												</div>
+												<div class="flag-text2">
+													<h4 id="flag-text">Polski</h4>
+												</div>
+												<i style='font-size:24px' class='fas'>&#xf107; </i>
+											</div>
+											<div id="dropdown">
+												<div class="polishmini-mode-toggle dropdown-content" id="polishmini-mode-toggle">
+													<img src="images/pl.png" alt="">
+													<h4>Polski</h4>
+												</div>
+												<div class="englishmini-mode-toggle dropdown-content" id="englishmini-mode-toggle">
+													<img src="images/en.png" alt="">
+													<h4>English, USA</h4>
+												</div>
+											</div>
+										</div>
 								</ul>
 							  </div>
 						</div>
+							<div class="lang-div">
+								<div id="lang-divgrid" onclick="selectlang()">
+									<div class="flag-icon">
+										<img src="images/pl.png" id="flag-icon2" alt="">
+									</div>
+									<div class="flag-text">
+										<h4 id="flag-text2">Polski</h4>
+									</div>
+									<i style='font-size:24px' class='fas'>&#xf107; </i>
+								</div>
+								<div id="dropdown2">
+									<div class="polish-mode-toggle dropdown-content" id="polish-mode-toggle">
+										<img src="images/pl.png" alt="">
+										<h4>Polski</h4>
+									</div>
+									<div class="english-mode-toggle dropdown-content" id="english-mode-toggle">
+										<img src="images/en.png" alt="">
+										<h4>English, USA</h4>
+									</div>
+								</div>
+							</div>
+						<div id="hrefs">
+							
+							<a href="contact.html" id="contact">Kontakt</a> <a href="skarbnik.html" id="skarbnik">Skarbnik</a> <a href="news.html" id="news" >Wiadomości</a> <a href="projects.html" id="projects" >Projekty</a> <a href="devs.html" id="devs" >Developerzy</a>
+						</div>
+						
 					</div>
 				</nav>
 				</div>
 				<div class="left">
-					<h1 class="main-text">Witaj na 2tpi.xyz!</h1>
-					<h3 class="bottom-text">Jesteśmy grupą, która pasjonuje się programowaniem i robienia z tego dużego hajsu.</h3>
-					<button class="main-button bc" onclick="location.href='projects.html';" type="button">Zobacz nasze projekty</button>
+					<h1 class="main-text" id="main-text">Witaj na 2tpi.xyz!</h1>
+					<h3 class="bottom-text" id="bottom-text">Jesteśmy grupą, która pasjonuje się programowaniem i robienia z tego dużego hajsu.</h3>
+					<button class="main-button bc" onclick="location.href='projects.html';" type="button" id="main-button">Zobacz nasze projekty</button>
 				</div>
 				<img alt="" class="banner1" src="images/bannerpattern2.png"> 
 				<img alt="" class="banner2" src="images/bannerpattern.png">
@@ -111,8 +163,8 @@
 			<div class="divgrid-gridoutside">
 				<div class="divgrid-gridinside" >
 				
-					<h1>Poznaj epickich developerów</h1>
-					<p>Jesteśmy zdolnymi i pomysłowymi twórcami wielu projektów, które zyskują dużą popularność przez nasze umiejętności promowania marki.</p>
+					<h1 id="divgrid-gridinside-h1">Poznaj epickich developerów</h1>
+					<p id="divgrid-gridinside-p">Jesteśmy zdolnymi i pomysłowymi twórcami wielu projektów, które zyskują dużą popularność przez nasze umiejętności promowania marki.</p>
 				</div>
 				<img src="images/divgridbackground.png" alt="" class="bb">
 				<img src="images/minidivgridbackground.png" alt="" class="bn bm no">
@@ -121,9 +173,9 @@
 		<div id="divgrid" class="grid2">
 			<div class="divgrid-gridoutside">
 				<div class="divgrid-gridinside" >
-					<h1>Przejrzyj najnowsze wiadomości</h1>
-					<p>Różne informacje związane z naszą działalnością i znaczące dla nas wydarzenia będziemy postować tutaj.</p>
-					<button class="main-button ac" onclick="location.href='news.html';" type="button">Zobacz wiadomości</button>
+					<h1 id="divgrid-gridinside-h12">Przejrzyj najnowsze wiadomości</h1>
+					<p id="divgrid-gridinside-p1">Różne informacje związane z naszą działalnością i znaczące dla nas wydarzenia będziemy postować tutaj.</p>
+					<button class="main-button ac" onclick="location.href='news.html';" type="button" id="main-button2">Zobacz wiadomości</button>
 				</div>
 				<img src="images/divgridbackground2.png" alt="" class="bb">
 				<img src="images/minidivgridbackground2.png" alt="" class="bn bm add">
@@ -131,15 +183,15 @@
 		</div>
 		<div id="divgrid" class="grid3">
 			<div class="divgridinfobox">
-				<a href="contact.html">Kontakt</a> 
-				<a href="skarbnik.html">Skarbnik</a> 
-				<a href="news.html">Wiadomości</a> 
-				<a href="projects.html">Projekty</a> 
-				<a href="devs.html">Developerzy</a>
+				<a href="contact.html" id="contact3">Kontakt</a> 
+				<a href="skarbnik.html" id="skarbnik3">Skarbnik</a> 
+				<a href="news.html" id="news3">Wiadomości</a> 
+				<a href="projects.html" id="projects3">Projekty</a> 
+				<a href="devs.html" id="devs3">Developerzy</a>
 			</div>
 			<div class="divgridinfobottom">
 				<a href="index.html"><img alt="2tpi" src="images/2tpi.png"></a>
-				<button class="main-button dc resize" onclick="location.href='projects.html';" type="button">Zobacz nasze projekty</button>
+				<button class="main-button dc resize" onclick="location.href='projects.html';" type="button" id="main-button3" >Zobacz nasze projekty</button>
 			</div>
 		</div>
 	</div>
