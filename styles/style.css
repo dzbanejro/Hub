@@ -151,7 +151,6 @@ body .vertical-centered-box {
 
 .announce-top {
   width: 100%;
-  display: none;
   height: 70px;
 }
 
@@ -323,6 +322,26 @@ nav {
   color: white;
 }
 
+.leftgryf {
+  max-width: 800px;
+  color: white;
+  margin-top: 150px;
+  margin-left: calc(35% - 70px);
+  position: absolute;
+  width: 705px;
+  float: left;
+}
+.leftgryf a {
+  text-decoration: none;
+  color: white;
+}
+.leftgryf h1 {
+  font-size: 50px;
+}
+.leftgryf p {
+  font-size: 20px;
+}
+
 .main-button {
   width: 300px;
   border-radius: 40px;
@@ -379,6 +398,10 @@ nav {
 
 .divgrid-gridoutside {
   padding-top: 165px;
+}
+
+.divgrid-gridoutsidegryf {
+  padding-top: 640px;
 }
 
 .grid1 {
@@ -495,9 +518,7 @@ nav {
   z-index: 1;
 }
 
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
+.menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
   display: block;
   position: absolute;
   width: 100%;
@@ -644,6 +665,7 @@ nav {
 
 #dropdown2 {
   margin-top: 4px;
+  margin-left: 12px;
   display: none;
   border-radius: 8px;
   position: absolute;
@@ -670,6 +692,11 @@ nav {
   bottom: 4px;
 }
 
+#nav-icon {
+  width: 140px;
+  height: 80px;
+}
+
 .lang-div2 {
   justify-content: center;
   margin: 0 auto;
@@ -690,6 +717,23 @@ nav {
   border-radius: 4px;
 }
 
+.maingryf {
+  background: url(/images/gryfbackground.png);
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+}
+
+.maingryf-rgba {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbarbackground {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 @media screen and (max-width: 2560px) {
   .divgridinfobox a {
     margin-top: 130px;
@@ -702,11 +746,14 @@ nav {
   .left {
     margin-left: 100px;
   }
+  .leftgryf {
+    margin-left: 100px;
+  }
   .divgridinfobottom {
     width: 60%;
   }
 }
-@media screen and (max-width: 1152px) {
+@media screen and (max-width: 1190px) {
   .hamburgernone {
     display: initial;
   }
@@ -753,6 +800,10 @@ nav {
     margin-left: 70px;
   }
   .left {
+    width: 100px;
+    margin-left: 40px;
+  }
+  .leftgryf {
     width: 100px;
     margin-left: 40px;
   }
@@ -865,6 +916,9 @@ nav {
   .left {
     margin-top: 140px;
   }
+  .leftgryf {
+    margin-top: 140px;
+  }
   .divgrid-gridinside {
     width: 70%;
   }
@@ -911,16 +965,15 @@ nav {
   .left {
     margin-left: 30px;
   }
+  .leftgryf {
+    margin-left: 30px;
+  }
   .divgrid-gridinside {
     width: 75%;
   }
   .divgridinfobottom img {
     width: 110px;
     height: 60px;
-  }
-  .main-button {
-    font-size: 13px;
-    width: 170px;
   }
   .dc {
     margin-top: 10px;
@@ -997,5 +1050,80 @@ nav {
   .divgridinfobottom img {
     width: 60px;
     height: 30px;
+  }
+}
+@media screen and (max-width: 230px) {
+  .bottom-text {
+    font-size: 14px;
+    width: 150px;
+  }
+  .divgridinfobox a {
+    font-size: 10px;
+  }
+  #nav-icon {
+    margin-left: 10px;
+    width: 70px;
+    height: 40px;
+  }
+  #divgrid h1 {
+    font-size: 25px;
+  }
+  .menu__btn {
+    width: 14px;
+    height: 14px;
+    margin-top: 20px;
+  }
+  .menu__btn > span::before {
+    content: "";
+    top: -4px;
+  }
+  .menu__btn > span::after {
+    content: "";
+    top: 4px;
+  }
+  #navbar {
+    height: 40px;
+  }
+  #nav-container {
+    height: 40px;
+  }
+  .main {
+    height: 500px;
+  }
+  .banner2 {
+    width: 150px;
+    padding-top: 227px;
+  }
+  .main-text {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .main-button {
+    width: 100px;
+    height: 30px;
+  }
+  .divgridinfobox {
+    display: none;
+  }
+  .grid3 {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .divgridinfobottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+  }
+}
+@media screen and (max-width: 185px) {
+  .bottom-text {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #divgrid h1 {
+    font-size: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
