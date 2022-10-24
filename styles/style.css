@@ -322,26 +322,6 @@ nav {
   color: white;
 }
 
-.leftgryf {
-  max-width: 800px;
-  color: white;
-  margin-top: 150px;
-  margin-left: calc(35% - 70px);
-  position: absolute;
-  width: 705px;
-  float: left;
-}
-.leftgryf a {
-  text-decoration: none;
-  color: white;
-}
-.leftgryf h1 {
-  font-size: 50px;
-}
-.leftgryf p {
-  font-size: 20px;
-}
-
 .main-button {
   width: 300px;
   border-radius: 40px;
@@ -398,10 +378,6 @@ nav {
 
 .divgrid-gridoutside {
   padding-top: 165px;
-}
-
-.divgrid-gridoutsidegryf {
-  padding-top: 640px;
 }
 
 .grid1 {
@@ -717,9 +693,20 @@ nav {
   border-radius: 4px;
 }
 
-.maingryf {
+.big {
+  display: initial;
+}
+
+.micro {
+  display: none;
+}
+
+#containergryf {
   background: url(/images/gryfbackground.png);
+  background-position: 50% 50%;
   background-size: cover;
+  justify-content: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 800px;
 }
@@ -734,12 +721,39 @@ nav {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.leftgryf {
+  max-width: 800px;
+  color: white;
+  margin-top: 150px;
+  margin-left: calc(35% - 70px);
+  position: absolute;
+  float: left;
+}
+.leftgryf a {
+  text-decoration: none;
+  color: white;
+}
+.leftgryf h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 50px;
+}
+.leftgryf .leftgryf-p {
+  font-size: 20px;
+}
+.leftgryf .leftgryf-warning {
+  padding-top: 10px;
+  color: #cc3333;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 2560px) {
   .divgridinfobox a {
     margin-top: 130px;
   }
 }
-@media screen and (max-width: 1055px) {
+@media screen and (max-width: 1096px) {
   .banner1 {
     display: none;
   }
@@ -813,6 +827,15 @@ nav {
   }
   .no {
     margin-top: 60px;
+  }
+  .gryfh1 {
+    font-size: 40px !important;
+  }
+  .fitcontent {
+    width: 200px !important;
+  }
+  .gryfbtn1 {
+    margin-top: 100px !important;
   }
   .divgridinfobox a {
     font-size: 15px;
@@ -975,6 +998,10 @@ nav {
     width: 110px;
     height: 60px;
   }
+  .main-button {
+    font-size: 13px;
+    width: 200px;
+  }
   .dc {
     margin-top: 10px;
   }
@@ -983,11 +1010,14 @@ nav {
   .divgrid-gridoutside img {
     display: none;
   }
+  .resize {
+    width: 165px;
+  }
   .divgridinfobox a {
     font-size: 10px;
   }
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 305px) {
   .main-text {
     width: 250px;
   }
@@ -996,6 +1026,13 @@ nav {
   .main-button {
     font-size: 11px;
     width: 150px;
+  }
+  .gryfh1 {
+    font-size: 30px !important;
+  }
+  .fitcontent {
+    width: 200px !important;
+    font-size: 15px !important;
   }
 }
 @media screen and (max-width: 280px) {
@@ -1051,6 +1088,9 @@ nav {
     width: 60px;
     height: 30px;
   }
+  .fitcontent {
+    width: 150px !important;
+  }
 }
 @media screen and (max-width: 230px) {
   .bottom-text {
@@ -1099,10 +1139,6 @@ nav {
     width: -moz-fit-content;
     width: fit-content;
   }
-  .main-button {
-    width: 100px;
-    height: 30px;
-  }
   .divgridinfobox {
     display: none;
   }
@@ -1116,8 +1152,14 @@ nav {
     padding-bottom: 20px;
     border: none;
   }
+  .big {
+    display: none;
+  }
+  .micro {
+    display: initial;
+  }
 }
-@media screen and (max-width: 185px) {
+@media screen and (max-width: 190px) {
   .bottom-text {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -1125,5 +1167,15 @@ nav {
   }
   #divgrid h1 {
     font-size: 15px;
+  }
+  .announce-top-text {
+    padding-top: 10px;
+    font-size: 7px;
+    width: 130px;
+  }
+  .announce-top-button {
+    font-size: 7px;
+    width: 100px;
+    height: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
