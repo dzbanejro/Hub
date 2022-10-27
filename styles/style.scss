@@ -271,7 +271,6 @@ nav {
 		color: white;
 	}
 }
-
 .main-button {
 	width: 300px;
 	border-radius: 40px;
@@ -312,15 +311,58 @@ nav {
 	}
 }
 .divgrid-gridinside {
+	z-index: 10 !important;
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
 	margin-top: 50px;
 	right: 0;
-	text-align: center;
 	position: absolute;
 	width: 60%;
 	text-align: center;
+}
+.divgrid-gridinsideprojects {
+	margin-top: 100px;
+	margin-left: 200px;
+	position: absolute;
+}
+.divgridbackground {
+	padding: 20px;
+	background-color: #f6f6f6;
+	border-radius: 8px;
+	height: 240px;
+}
+#pbutton {
+	cursor: pointer;
+	text-align: center;
+	height: 40px;
+	padding-top: 5px;
+	margin-top: 50px;
+	background-color: #23272a;
+	-webkit-transition: box-shadow 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+	transition: box-shadow 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+	transition: box-shadow 300ms ease, transform 300ms ease, background-color 300ms ease;
+	transition: box-shadow 300ms ease, transform 300ms ease, background-color 300ms ease, -webkit-transform 300ms ease;
+	&:hover {
+		box-shadow: 0 2px 9px 0 rgba(6, 10, 11, 0.42);
+		-webkit-transform: translate(0px, -2px);
+		-ms-transform: translate(0px, -2px);
+		transform: translate(0px, -2px);
+	}
+}
+.descprojects {
+	font-weight: 500;
+	color: #23272a;
+	margin-top: 10px;
+	max-width: 500px;
+}
+#divgridprojects {
+	h2 {
+		color: white;
+		width: 200px;
+		border-radius: 28px;
+		float: left;
+	}
 }
 .divgrid-gridoutside {
 	padding-top: 165px;
@@ -332,6 +374,12 @@ nav {
 	background-color: #f6f6f6;
 	;
 }
+
+.comingsoon {
+	padding-top: 500px;
+	text-align: center;
+}
+
 .grid1, .grid2 {
 	height: 680px;
 	img {
@@ -347,6 +395,10 @@ nav {
 		user-select: none;
 		position: relative;
 	}
+}
+.grid1projects {
+	height: 640px;
+	background-color: white;
 }
 .bb {
 	display: flex;
@@ -491,6 +543,38 @@ nav {
 		padding-top: 134px;
 	}
 }
+#divgrid-gridinside-h1 {
+	color: #23272a;
+	text-align: center;
+}
+.warningdesc {
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 10px;
+}
+.buttonflex {
+	p {
+		font-size: 15px;
+		font-weight: bold;
+		color: #23272a;
+		padding-right: 10px;
+		margin-top: 60px;
+		float: right;
+		height: fit-content;
+		width: fit-content;
+	}
+	a {
+		color: #23272a;
+		text-decoration: none;
+	}
+	span {
+		cursor: pointer;
+		border-bottom: 1px solid #f6f6f6;
+		&:hover {
+			border-bottom: 1px solid black;
+		}
+	}
+}
 .fas {
 	margin-top: 4px;
 	margin-left: 5px;
@@ -587,13 +671,10 @@ nav {
 	position: relative;
 	bottom: 4px;
 }
-
 #nav-icon {
 	width: 140px;
 	height: 80px;
 }
-
-
 .lang-div2 {
 	justify-content: center;
 	margin: 0 auto;
@@ -612,19 +693,14 @@ nav {
 		border-radius: 4px;
 	}
 }
-
 .big {
 	display: initial;
 }
-
 .micro {
 	display: none;
 }
-
 // GRYF
-
 #containergryf {
-	background: url(/images/gryfbackground.png);
 	background-position: 50% 50%;
 	background-size: cover;
 	justify-content: center;
@@ -632,17 +708,14 @@ nav {
 	width: 100%;
 	height: 800px;
 }
-
 .maingryf-rgba {
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, .3);
 }
-
 .navbarbackground {
 	background-color: rgba(0, 0, 0, .3);
 }
-
 .leftgryf {
 	max-width: 800px;
 	color: white;
@@ -656,7 +729,7 @@ nav {
 	}
 	h1 {
 		width: fit-content;
-		font-size: 50px;	
+		font-size: 50px;
 	}
 	.leftgryf-p {
 		font-size: 20px;
@@ -667,7 +740,63 @@ nav {
 		font-weight: bold;
 	}
 }
-
+#containerprojects {
+	background: rgb(103, 87, 238);
+	background: linear-gradient(41deg, rgba(103, 87, 238, 1) 22%, rgba(87, 56, 240, 1) 42%, rgba(89, 61, 236, 1) 62%, rgba(76, 21, 255, 1) 100%);
+	background-position: 50% 50%;
+	background-size: cover;
+	justify-content: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 400px;
+}
+.leftprojects {
+	max-width: 800px;
+	color: white;
+	margin-top: 100px;
+	margin-left: calc(35% - 70px);
+	position: absolute;
+	float: left;
+	a {
+		text-decoration: none;
+		color: white;
+	}
+	h1 {
+		width: fit-content;
+		font-size: 50px;
+	}
+	.leftgryf-p {
+		font-size: 20px;
+	}
+	.leftgryf-warning {
+		padding-top: 10px;
+		color: #cc3333;
+		font-weight: bold;
+	}
+}
+.warning {
+	font-size: 15px;
+	font-weight: bolder;
+	color: #cc3333;
+}
+.banner2projects {
+	z-index: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	float: right;
+	padding-top: 5px;
+}
+.banner1projects {
+	z-index: 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	float: left;
+	padding-top: 5px;
+}
 @media screen and (max-width: 2560px) {
 	.divgridinfobox a {
 		margin-top: 130px;
@@ -984,7 +1113,6 @@ nav {
 	.menu__btn {
 		margin-left: 0px;
 	}
-
 }
 @media screen and (max-width: 270px) {
 	.announce-top-text {
@@ -1037,12 +1165,11 @@ nav {
 		width: 150px !important;
 	}
 }
-
 @media screen and (max-width: 230px) {
 	.bottom-text {
 		font-size: 14px;
 		width: 150px;
-	}	
+	}
 	.divgridinfobox {
 		a {
 			font-size: 10px;
@@ -1083,7 +1210,7 @@ nav {
 	.banner2 {
 		width: 150px;
 		padding-top: 227px;
-	}	
+	}
 	.main-text {
 		width: fit-content;
 	}
@@ -1102,7 +1229,7 @@ nav {
 		display: none;
 	}
 	.micro {
-		display: initial	;
+		display: initial;
 	}
 }
 @media screen and (max-width: 190px) {
@@ -1124,5 +1251,4 @@ nav {
 		width: 100px;
 		height: 30px;
 	}
-	
 }

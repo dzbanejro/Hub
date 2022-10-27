@@ -37,7 +37,7 @@ var first_click = true;
 
 function mainlangpl() {
 	document.getElementById("announce-top-text-b").innerHTML = "Gryf jaganowo jest w rozwoju!";
-	document.getElementById("announce-top-text").innerHTML = "I jeszcze trochę pobędzie...";
+	document.getElementById("announce-top-text").innerHTML = " I jeszcze trochę pobędzie...";
 	document.getElementById("announce-top-button").innerHTML = "Zobacz więcej";
 	document.getElementById("flag-text").innerHTML = "Polski";
 	document.getElementById("flag-text2").innerHTML = "Polski";
