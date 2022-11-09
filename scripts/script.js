@@ -22,7 +22,7 @@ var navbarmenu = document.querySelector(".menu__box");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
-	if (window.pageYOffset >= sticky) {
+	if (window.pageYOffset > sticky) {
 		navbar.classList.add("sticky");
 		navbarmenu.classList.remove("dd")
 		navbarmenu.classList.add("sticky-menu-box")
@@ -32,6 +32,8 @@ function myFunction() {
 		navbarmenu.classList.add("dd")
 	}
 }
+
+
 var first_click = true;
 
 
@@ -168,6 +170,70 @@ function gryfeng() {
 }
 
 
+function projectseng() {
+	document.getElementById("devs").innerHTML = "Developers";
+	document.getElementById("contact").innerHTML = "Contact";
+	document.getElementById("skarbnik").innerHTML = "Paymaster";
+	document.getElementById("news").innerHTML = "News";
+	document.getElementById("projects").innerHTML = "Projects";
+	document.getElementById("devs2").innerHTML = "Developers";
+	document.getElementById("contact2").innerHTML = "Contact";
+	document.getElementById("skarbnik2").innerHTML = "Paymaster";
+	document.getElementById("news2").innerHTML = "News";
+	document.getElementById("projects").innerHTML = "Projects";
+	document.getElementById("flag-text").innerHTML = "English, USA";
+	document.getElementById("flag-text2").innerHTML = "English, USA";
+	document.getElementById("flag-icon").src = "images/en.png"
+	document.getElementById("flag-icon2").src = "images/en.png"
+	document.getElementById("gryfh1").innerHTML = "PROJECTS"
+	document.getElementById("leftprojects-p").innerHTML = "Epic projects from epic developers"
+	document.getElementById("divgrid-gridinsideprojects-p").innerHTML = "The best sports club in Poland, which started in Słupsk. Gryf is expanding its offer, for example by sponsoring a professional e-sport team in CS:GO."
+	document.getElementById("divgrid-gridinside-p").innerHTML = "Warning! Jaganowo is in early access."
+	document.getElementById("autorgryf").style.marginTop = "30px"
+	document.getElementById("divgrid-gridinsideprojects-p-updateinfo").innerHTML = "current update 2.11"
+	document.getElementById("comingsoon").innerHTML = "More projects coming soon"
+	document.getElementById("main-button3").innerHTML = "See our projects";
+	document.getElementById("devs3").innerHTML = "Developers";
+	document.getElementById("projects3").innerHTML = "Projects";
+	document.getElementById("news3").innerHTML = "News";
+	document.getElementById("skarbnik3").innerHTML = "Paymaster";
+	document.getElementById("contact3").innerHTML = "Contact";
+	document.getElementById("divgrid-gridinside-h1-wakacje").innerHTML = "Vacation Offers";
+	document.getElementById("divgrid-gridinsideprojects-p-wakacje").innerHTML = "No description."
+}
+function projectspl() {
+	document.getElementById("devs").innerHTML = "Developerzy";
+	document.getElementById("contact").innerHTML = "Kontakt";
+	document.getElementById("skarbnik").innerHTML = "Skarbnik";
+	document.getElementById("news").innerHTML = "Wiadomości";
+	document.getElementById("projects").innerHTML = "Projekty";
+	document.getElementById("devs2").innerHTML = "Developerzy";
+	document.getElementById("contact2").innerHTML = "Kontakt";
+	document.getElementById("skarbnik2").innerHTML = "Skarbnik";
+	document.getElementById("news2").innerHTML = "Wiadomości";
+	document.getElementById("projects").innerHTML = "Projekty";
+	document.getElementById("flag-text").innerHTML = "Polski";
+	document.getElementById("flag-text2").innerHTML = "Polski";
+	document.getElementById("flag-icon").src = "images/pl.png"
+	document.getElementById("flag-icon2").src = "images/pl.png"
+	document.getElementById("gryfh1").innerHTML = "PROJEKTY"
+	document.getElementById("leftprojects-p").innerHTML = "Epickie projekty od epickich developerów"
+	document.getElementById("divgrid-gridinsideprojects-p").innerHTML = "Najlepszy klub sportowy w Polsce, który swój początek zaczął w Słupsku. Gryf rozszerza swoją ofertę chociażby sponsorując profesjonalną drużynę e-sportową w CS:GO."
+	document.getElementById("divgrid-gridinside-p").innerHTML = "Uwaga! Jaganowo jest w wszczesnym dostępie."
+	document.getElementById("autorgryf").style.marginTop = "50px"
+	document.getElementById("divgrid-gridinsideprojects-p-updateinfo").innerHTML = "aktualny update 2.11"
+	document.getElementById("comingsoon").innerHTML = "Więcej projektów wkrótce"
+	document.getElementById("main-button3").innerHTML = "Zobacz nasze projekty";
+	document.getElementById("devs3").innerHTML = "Developerzy";
+	document.getElementById("projects3").innerHTML = "Projekty";
+	document.getElementById("news3").innerHTML = "Wiadomości";
+	document.getElementById("skarbnik3").innerHTML = "Skarbnik";
+	document.getElementById("contact3").innerHTML = "Kontakt";
+	document.getElementById("divgrid-gridinside-h1-wakacje").innerHTML = "Oferty na wakację";
+	document.getElementById("divgrid-gridinsideprojects-p-wakacje").innerHTML = "Brak opisu."
+}
+
+
 function selectlang() {
 	if (first_click) {
 		document.getElementById("dropdown").style.display = "inherit";
@@ -190,6 +256,9 @@ const enableEnglishMode = () => {
 	if (document.getElementById("gryf")) {
 		gryfeng();
 	}
+	if (document.getElementById("projectsmain")) {
+		projectseng();
+	}
 	localStorage.setItem('englishMode', 'enabled');
 }
 const disableEnglishMode = () => {
@@ -208,6 +277,9 @@ const enablePolishMode = () => {
 	}
 	if (document.getElementById("gryf")) {
 		gryfpl();
+	}
+	if (document.getElementById("projectsmain")) {
+		projectspl();
 	}
 	localStorage.setItem('polishMode', 'enabled');
 }

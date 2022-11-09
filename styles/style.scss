@@ -6,7 +6,6 @@
 	margin: 0;
 	border: 0;
 	box-sizing: border-box;
-	outline: none;
 	transition: all 0.3s;
 }
 html {
@@ -115,6 +114,7 @@ body {
 	}
 }
 #result-iframe-wrap {
+	z-index: 99 !important;
 	width: 100%;
 }
 .announce-top {
@@ -161,7 +161,7 @@ body {
 }
 #navbar {
 	top: 0;
-	z-index: 100 !important;
+	z-index: 98 !important;
 	width: 100%;
 	height: 80px;
 	transition: all 0.5s;
@@ -172,6 +172,7 @@ nav {
 	justify-content: center;
 }
 #nav-container {
+	top: 0;
 	display: initial;
 	text-align: center;
 	width: 70%;
@@ -321,10 +322,17 @@ nav {
 	width: 60%;
 	text-align: center;
 }
+
+.divgrid-gridforcards {
+	margin-left: auto;
+    justify-content: center;
+    display: flex;
+    margin-right: auto;
+}
+
 .divgrid-gridinsideprojects {
-	margin-top: 100px;
-	margin-left: 200px;
 	position: absolute;
+	margin-left: 50px;
 }
 .divgridbackground {
 	padding: 20px;
@@ -351,10 +359,11 @@ nav {
 	}
 }
 .descprojects {
+	z-index: 70 !important;
 	font-weight: 500;
 	color: #23272a;
 	margin-top: 10px;
-	max-width: 500px;
+	max-width: 398px;
 }
 #divgridprojects {
 	h2 {
@@ -374,12 +383,10 @@ nav {
 	background-color: #f6f6f6;
 	;
 }
-
 .comingsoon {
-	padding-top: 500px;
+	padding-top: 200px;
 	text-align: center;
 }
-
 .grid1, .grid2 {
 	height: 680px;
 	img {
@@ -397,12 +404,36 @@ nav {
 	}
 }
 .grid1projects {
-	height: 640px;
+	height: 740px;
 	background-color: white;
+	img {
+		z-index: 69 !important;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: center;
+		width: 540px;
+		margin-top: 30px;
+		height: 280px;
+		z-index: 0;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		position: relative;
+		
+	}
+	
+	
 }
 .bb {
 	display: flex;
 }
+
+.bbprojects {
+	display: flex;
+}
+
+
 .grid3 {
 	height: 340px;
 	background-color: #2c2c2c;
@@ -543,22 +574,28 @@ nav {
 		padding-top: 134px;
 	}
 }
-#divgrid-gridinside-h1 {
+#divgrid-gridinside-h1, #divgrid-gridinside-h1-wakacje {
 	color: #23272a;
 	text-align: center;
 }
+
+
+
 .warningdesc {
-	padding-left: 20px;
-	padding-right: 20px;
 	margin-top: 10px;
 }
+
+#autorgryf {
+	z-index: 70 !important;
+	margin-top: 50px;
+}
+
 .buttonflex {
 	p {
 		font-size: 15px;
 		font-weight: bold;
 		color: #23272a;
 		padding-right: 10px;
-		margin-top: 60px;
 		float: right;
 		height: fit-content;
 		width: fit-content;
@@ -574,6 +611,12 @@ nav {
 			border-bottom: 1px solid black;
 		}
 	}
+}
+.greycard {
+	margin: 0 auto;
+	max-width: 420px;
+	border-radius: 8px;
+	background-color: #f6f6f6;
 }
 .fas {
 	margin-top: 4px;
@@ -788,6 +831,88 @@ nav {
 	float: right;
 	padding-top: 5px;
 }
+.imgoverflow {
+	
+	cursor: pointer;
+	
+	box-sizing: border-box;
+	position: relative;
+	vertical-align: middle;
+	transition: all .8s;
+	img {
+		transform: scale(1.1);
+		transition: transform 0.25s;
+		height: 218px;
+	}
+}
+
+.imggryf {
+	display: flex;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	transition: background-size .5s;
+  	background-size: 100%;
+	background-repeat: no-repeat;
+ 	background-position: center;
+	width: 420px;
+	z-index: 16 !important;
+	height: 200px;
+	&:hover {
+			background-size: 120%;
+	  }
+}
+.hovergrid {
+	position: absolute;
+	z-index: 95 !important;
+	width: 420px;
+	height: 200px;
+	&:hover + .imggryf {
+		background-size: 120%;
+	}
+}
+
+.projectstar {
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.greycardbottom {
+	padding: 10px;
+}
+
+.gryfbckg {
+	background-image: url(../images/gryfbackgroundorginal.png);
+}
+
+.wakacjebckg {
+	background-image: url(../images/wakacjebackground.png);
+}
+
+#nodesc {
+	z-index: 70 !important;
+	position:absolute;
+	bottom: 10px;
+	right: 0;	
+}
+
+.wrap {
+	display: flex;
+	border-radius: 8px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	
+	cursor: pointer;
+}
+.gryfmaintext {
+	margin-bottom: 20px;
+}
+
+
 .banner1projects {
 	z-index: 0;
 	-webkit-user-select: none;
@@ -806,6 +931,11 @@ nav {
 	.banner1 {
 		display: none;
 	}
+
+	.banner1projects {
+		display: none;
+	}
+
 	.left {
 		margin-left: 100px;
 	}
@@ -823,6 +953,9 @@ nav {
 	#hrefs {
 		display: none;
 	}
+
+
+
 	.divgrid-gridoutside {
 		img {
 			width: 850px;
