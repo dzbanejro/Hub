@@ -345,3 +345,21 @@ englishModeToggle.addEventListener('click', () => {
 	}
 });	
 
+
+
+ 
+
+
+
+
+
+	
+
+
+
+	
+	 
+
+
+
+

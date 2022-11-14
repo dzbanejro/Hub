@@ -257,6 +257,7 @@ main {
 	justify-content: center;
 	z-index: 1;
 	-webkit-appearance: none;
+	appearance: none;
 	border: 0;
 	background: transparent;
 	border-radius: 0;
@@ -715,6 +716,7 @@ btn-group {
 }
 input[type=number]::-webkit-inner-spin-button {
 	-webkit-appearance: none;
+	appearance: none;
 }
 #solvetext {
 	color: var(--clr-color_9);

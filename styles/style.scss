@@ -159,6 +159,7 @@ body {
 		box-shadow: 0 8px 15px rgb(0 0 0 / 20%);
 	}
 }
+
 #navbar {
 	top: 0;
 	z-index: 98 !important;
@@ -393,7 +394,6 @@ nav {
 		margin-left: auto;
 		margin-right: auto;
 		justify-content: center;
-		width: 1000px;
 		height: 350px;
 		z-index: 0;
 		-webkit-user-select: none;
@@ -426,10 +426,12 @@ nav {
 	
 }
 .bb {
+	width: 1000px;
 	display: flex;
 }
 
 .bbprojects {
+	width: 1000px;
 	display: flex;
 }
 
@@ -927,6 +929,32 @@ nav {
 		margin-top: 130px;
 	}
 }
+
+@media screen and (max-width: 1190px) {
+	.hamburgernone {
+		display: initial;
+	}
+	#hrefs {
+		display: none;
+	}
+
+
+
+	.divgrid-gridoutside {
+		.bb {
+			width: 850px;
+		}
+	}
+	#divgrid {
+		h1 {
+			padding-top: 30px;
+		}
+	}
+	.lang-div {
+		display: none;
+	}
+}
+
 @media screen and (max-width: 1096px) {
 	.banner1 {
 		display: none;
@@ -945,38 +973,46 @@ nav {
 	.divgridinfobottom {
 		width: 60%;
 	}
-}
-@media screen and (max-width: 1190px) {
-	.hamburgernone {
-		display: initial;
+	.divgrid-gridforcards {
+		
+		display: block;
 	}
-	#hrefs {
-		display: none;
+	.divgrid-gridinsideprojects {
+		margin-left: 0px;
+		left: 0;
+		right: 0;
 	}
-
-
-
-	.divgrid-gridoutside {
+	.grid1projects {
+		height: 1280px;
+	}
+	.grid1projects {
 		img {
-			width: 850px;
+			width: 530px;
 		}
 	}
-	#divgrid {
-		h1 {
-			padding-top: 30px;
-		}
+	.descprojects {
+		float: left;
 	}
-	.lang-div {
-		display: none;
+	#nodesc {
+		position: initial;
+		margin-top: 10px;
+		float: right;
+	}
+	.addbottom {
+		height: 50px;
+	}
+	#autorgryf {
+		margin-top: 40px !important;
 	}
 }
+
 @media screen and (max-width: 870px) {
 	.divgridinfobottom {
 		width: 80%;
 	}
 	.divgrid-gridoutside {
 		padding-top: 190px;
-		img {
+		.bb {
 			width: 670px;
 			height: 300px;
 		}
@@ -1021,6 +1057,9 @@ nav {
 	}
 	.fitcontent {
 		width: 200px !important;
+	}
+	.projectcontent {
+		width: 250px !important;
 	}
 	.gryfbtn1 {
 		margin-top: 100px !important;
@@ -1093,7 +1132,38 @@ nav {
 		font-size: 15px;
 		width: 240px;
 	}
+	.bbprojects {
+		margin-top: 50px !important;
+		width: 530px !important;
+		height: 250px !important;
+	}
 }
+
+@media screen and (max-width: 550px) {
+	.bbprojects {
+		width: 400px !important;
+		height: 230px !important;
+	}
+	.hovergrid {
+		height: 180px;
+		width: 350px;
+	}
+	.wrap {
+		align-items: center;
+		margin: 0 auto;
+	}
+	.imgoverflow {
+		max-height: 180px;
+	}
+	.greycard {
+		max-width: 350px;
+	}
+	.imggryf {
+		height: 180px;
+		width: 350px;
+	}
+}
+
 @media screen and (max-width: 440px) {
 	.main-text {
 		width: 300px;
@@ -1143,7 +1213,48 @@ nav {
 	.dc {
 		margin-top: 20px;
 	}
+	.gryfmaintext {
+		font-size: 25px;
+	}
+	.bbprojects {
+		margin-top: 40px !important;
+		width: 360px !important;
+		height: 200px !important;
+	}
+	.comingsoon {
+		font-size: 25px;
+	}
+	.hovergrid {
+		height: 160px;
+		width: 320px;
+	}
+	.wrap {
+		align-items: center;
+		margin: 0 auto;
+	}
+	.imgoverflow {
+		max-height: 160px;
+	}
+	.greycard {
+		max-width: 320px;
+	}
+	.imggryf {
+		height: 160px;
+		width: 320px;
+	}
+	.push {
+		padding-top: 250px;
+	}
+	.greycardbottom {
+		font-size: 15px;
+	}
+	#autorgryf {
+		margin-top: 60px !important;
+	}
+	
 }
+
+
 @media screen and (max-width: 360px) {
 	.menu__btn {
 		margin-left: 25px;
@@ -1167,7 +1278,7 @@ nav {
 			font-size: 13px;
 		}
 	}
-	.announce-top-text {
+	.announce-top-text-span {
 		font-size: 13px;
 		width: 130px;
 	}
@@ -1201,8 +1312,44 @@ nav {
 	.dc {
 		margin-top: 10px;
 	}
+	.divgridinfobox {
+		a {
+			font-size: 10px;
+		}
+	}
+	.bbprojects {
+		margin-top: 25px !important; 
+		display: inherit !important;
+		width: 320px !important;
+		height: 230px !important;
+	}
+	.comingsoon {
+		font-size: 20px;
+	}
+	.hovergrid {
+		height: 160px;
+		width: 300px;
+	}
+	.wrap {
+		align-items: center;
+		margin: 0 auto;
+	}
+	.imgoverflow {
+		max-height: 180px;
+	}
+	.greycard {
+		max-width: 300px;
+	}
+	.imggryf {
+		height: 160px;
+		width: 300px;
+	}
+	.push {
+		padding-top: 250px;
+	}
 }
 @media screen and (max-width: 330px) {
+
 	.divgrid-gridoutside {
 		img {
 			display: none;
@@ -1210,11 +1357,6 @@ nav {
 	}
 	.resize {
 		width: 165px;
-	}
-	.divgridinfobox {
-		a {
-			font-size: 10px;
-		}
 	}
 }
 @media screen and (max-width: 305px) {
@@ -1234,6 +1376,7 @@ nav {
 		width: 200px !important;
 		font-size: 15px !important;
 	}
+	
 }
 @media screen and (max-width: 280px) {
 	.main-text {
